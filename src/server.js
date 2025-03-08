@@ -8,6 +8,9 @@ app.get("/", (request, response) => {
   });
 });
 
+const { CustomerApiRouter } = require("./controllers/CustomerApiController.js");
+app.use("/customers", CustomerApiRouter);
+
 // wild card * means match any route
 // put this at the end of route declarations to catch anything that does no match an earlier route
 app.get("*", (request, response) => {
