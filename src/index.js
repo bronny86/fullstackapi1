@@ -1,10 +1,9 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-// import the configured server and run it
-
 const { app } = require("./server");
 
+// eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
